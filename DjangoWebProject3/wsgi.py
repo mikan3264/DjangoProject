@@ -15,6 +15,9 @@ framework.
 """
 import os
 
+import pymysql
+pymysql.install_as_MySQLdb()
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DjangoWebProject3.settings")
 
 # This application object is used by any WSGI server configured to use this
