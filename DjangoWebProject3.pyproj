@@ -42,6 +42,16 @@
     <Compile Include="DjangoWebProject3\settings.py" />
     <Compile Include="DjangoWebProject3\urls.py" />
     <Compile Include="DjangoWebProject3\wsgi.py" />
+    <Compile Include="testapp\admin.py" />
+    <Compile Include="testapp\apps.py" />
+    <Compile Include="testapp\migrations\__init__.py" />
+    <Compile Include="testapp\models.py" />
+    <Compile Include="testapp\tests.py" />
+    <Compile Include="testapp\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testapp\views.py" />
+    <Compile Include="testapp\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -54,6 +64,9 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="DjangoWebProject3\" />
+    <Folder Include="testapp\" />
+    <Folder Include="testapp\migrations\" />
+    <Folder Include="testapp\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
@@ -86,6 +99,7 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="testapp\templates\index.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">

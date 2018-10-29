@@ -6,6 +6,9 @@ from datetime import datetime
 from django.conf.urls import url
 import django.contrib.auth.views
 
+from django.contrib import admin
+from django.urls import include, path
+
 import app.forms
 import app.views
 
@@ -37,6 +40,8 @@ urlpatterns = [
             'next_page': '/',
         },
         name='logout'),
+    path('testapp/', include('testapp.urls')),
+    path('admin/', admin.site.urls),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
