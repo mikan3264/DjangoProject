@@ -99,6 +99,9 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="testapp\templates\testapp\detail.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="testapp\templates\testapp\index.html" />
   </ItemGroup>
   <ItemGroup>

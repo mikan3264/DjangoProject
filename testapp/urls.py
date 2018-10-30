@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+app_name = 'testapp'    #アプリの名前空間定義。templateからURLを正確に判断するためのもの
 urlpatterns = [
     path('', views.index, name='index'),
 
