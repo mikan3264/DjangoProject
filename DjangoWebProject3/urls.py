@@ -40,8 +40,8 @@ urlpatterns = [
             'next_page': '/',
         },
         name='logout'),
-    path('testapp/', include('testapp.urls')),
-    path('admin/', admin.site.urls),
+    path('testapp/', include('testapp.urls')),  #自分のアプリを登録する
+    path('admin/', admin.site.urls),            #管理サイトを登録する
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
