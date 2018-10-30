@@ -67,6 +67,7 @@
     <Folder Include="testapp\" />
     <Folder Include="testapp\migrations\" />
     <Folder Include="testapp\templates\" />
+    <Folder Include="testapp\templates\testapp\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
@@ -98,7 +99,7 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
-    <Content Include="testapp\templates\index.html" />
+    <Content Include="testapp\templates\testapp\index.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">
