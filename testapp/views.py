@@ -1,14 +1,16 @@
-from django.http import HttpResponse
-from .models import Question
+from django.http import HttpResponse, HttpResponseRedirect
+from .models import Choice, Question
 from django.template import loader
 from django.http import Http404
 from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.db.models import F
 
 
 #def index(request):
 #    return HttpResponse("Hello, world. You're at the polls index.")        #テスト出力
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]       #Questionオブジェクトの最新5件を表示
     #output = ', '.join([q.question_text for q in latest_question_list])    #出力リスト作成。デバッグに使えそう
     template = loader.get_template('testapp/index.html')
     context = {
@@ -31,10 +33,30 @@ def detail(request, question_id):                                           #get
     return render(request, 'testapp/detail.html', {'question': question})
 
 def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, 'testapp/results.html', {'question': question})
 
 def vote(request, question_id):
-    return HttpResponse("You're voting on question %s." % question_id)
+    # Questionオブジェクトを取得
+    question = get_object_or_404(Question, pk=question_id)
+    try:
+        # formで渡されたchoice_idからchoiceオブジェクトを取得
+        selected_choice = question.choice_set.get(pk=request.POST['choice'])
+    except (KeyError, Choice.DoesNotExist):
+        # postメソッドにchoiceが存在しなければエラー
+        return render(request, 'testapp/detail.html', {
+            'question': question,
+            'error_message': "You didn't select a choice.",
+        })
+    else:
+        # オブジェクト取得に成功していれば投票数を加算し、DB保存。
+        #selected_choice.votes += 1
+        # F()でDBアクセスの競合を防いでくれるらしい。see also"https://docs.djangoproject.com/ja/2.1/ref/models/expressions/#avoiding-race-conditions-using-f"
+        # "https://qiita.com/okoppe8/items/66a8747cf179a538355b"
+        selected_choice.votes = F('votes') + 1;
+        selected_choice.save()
+        
+        # 結果ページへリダイレクト
+        return HttpResponseRedirect(reverse('testapp:results', args=(question.id,)))
 
 # Create your views here.

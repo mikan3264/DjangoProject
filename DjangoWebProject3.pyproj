@@ -103,6 +103,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="testapp\templates\testapp\index.html" />
+    <Content Include="testapp\templates\testapp\results.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">

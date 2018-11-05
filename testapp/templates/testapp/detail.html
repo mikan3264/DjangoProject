@@ -2,10 +2,14 @@
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <body>
        <h1>{{ question.question_text }}</h1>
-       <ul>
-       {% for choice in question.choice_set.all %}  {#独特な書き方。questionオブジェクトから外部キーで紐づくmodelクラスであるchoiceを自動で探してくれてるらしい。#}
-           <li>{{ choice.choice_text }}</li>
+       
+       <form action="{% url 'testapp:vote' question.id %}" method="post">   {#url読み出し。testappのvoteはviews.vote#}
+       {% csrf_token %}                                                     {#クロスサイトリクエストフォージェリ(CSRF) を防ぐためのモノ。see also"http://d.hatena.ne.jp/blaue_fuchs/20111014/1318520988"#}
+       {% for choice in question.choice_set.all %}                          {#独特な書き方。questionオブジェクトから外部キーで紐づくmodelクラスであるchoiceを自動で探してくれてるらしい。#}
+           <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">  {#ループカウンタは自作しなくてもforloop.counterで取れるらしい。#}
+           <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>                {#choice_textをラベルとしてラジオボタン作成#}
        {% endfor %}
-       </ul>
+       <input type="submit" value="Vote">
+       </form>
     </body>
 </html>
