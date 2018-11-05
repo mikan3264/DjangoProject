@@ -8,6 +8,12 @@ Replace this with more appropriate tests for your application.
 import django
 from django.test import TestCase
 
+import datetime
+from django.utils import timezone
+from .models import Question
+import sys
+from builtins import classmethod
+
 # TODO: Configure your database in settings.py and sync before running tests.
 
 class SimpleTest(TestCase):
@@ -16,6 +22,7 @@ class SimpleTest(TestCase):
     # Django requires an explicit setup() when running tests in PTVS
     @classmethod
     def setUpClass(cls):
+        super(SimpleTest, cls).setUpClass()
         django.setup()
 
     def test_basic_addition(self):
