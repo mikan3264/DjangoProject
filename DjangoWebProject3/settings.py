@@ -58,7 +58,7 @@ ROOT_URLCONF = 'DjangoWebProject3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # projectが参照可能なtemplateディレクトリ
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
