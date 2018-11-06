@@ -1,4 +1,6 @@
-﻿<html>
+﻿{% load static %}                                                                   {#staticファイルの完全URL生成#}
+<link rel="stylesheet" type="text/css" href="{% static 'testapp/style.css' %}">     {#staticファイル読み込み#}
+<html>
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <body>
         {% if latest_question_list %}   {#事前にpythonで設定したオブジェクトはこちらで参照可能#}
