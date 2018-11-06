@@ -54,6 +54,8 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="DjangoWebProject3\" />
+    <Folder Include="E:\DjangoProject\templates\" />
+    <Folder Include="E:\DjangoProject\templates\admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
@@ -85,6 +87,7 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="templates\admin\base_site.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
