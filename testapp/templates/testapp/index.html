@@ -1,15 +1,18 @@
 ﻿{% load static %}                                                                   {#staticファイルの完全URL生成#}
 <link rel="stylesheet" type="text/css" href="{% static 'testapp/style.css' %}">     {#staticファイル読み込み#}
 <html>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <body>
         {% if latest_question_list %}   {#事前にpythonで設定したオブジェクトはこちらで参照可能#}
+        <div class="bgsize">
             <ul>
             {% for question in latest_question_list %}                                                      {#ループ処理。latest_question_listをイテレートしている。#}
                 {#<li><a href="/testapp/{{ question.id }}/">{{ question.question_text }}</a></li>#}        {#{{????}}はdjango templateの独自の書き方。#}
-                <li><a href="{% url 'testapp:detail' question.id %}">{{ question.question_text }}</a></li>  {#URLを直書きせずにurlsで定義したdetailのURLを参照する。#}
+                <li class="colchan"><a href="{% url 'testapp:detail' question.id %}">{{ question.question_text }}</a></li>  {#URLを直書きせずにurlsで定義したdetailのURLを参照する。#}
             {% endfor %}
             </ul>
+        </div>
         {% else %}
             <p>No polls are available.</p>
         {% endif %}
