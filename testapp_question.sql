@@ -22,18 +22,7 @@ SET time_zone = "+00:00";
 -- Database: `django_test`
 --
 
--- --------------------------------------------------------
 
---
--- テーブルの構造 `testapp_question`
---
-
-DROP TABLE IF EXISTS `testapp_question`;
-CREATE TABLE `testapp_question` (
-  `id` int(11) NOT NULL,
-  `question_text` varchar(200) NOT NULL,
-  `pub_date` datetime(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- テーブルのデータのダンプ `testapp_question`
@@ -44,7 +33,7 @@ INSERT INTO `testapp_question` (`id`, `question_text`, `pub_date`) VALUES
 (4, 'who am i?', '2018-10-30 11:17:07.000000'),
 (5, '好きな食べ物', '2018-11-05 10:29:21.000000'),
 (6, 'testq', '2018-11-07 10:09:09.000000'),
-(7, 'test add from shell', '2018-11-07 10:17:18.413226');
+(7, 'イキスギィ', '2018-11-07 10:17:18.413226');
 
 --
 -- Indexes for dumped tables

@@ -25,16 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- テーブルの構造 `testapp_choice`
---
 
-DROP TABLE IF EXISTS `testapp_choice`;
-CREATE TABLE `testapp_choice` (
-  `id` int(11) NOT NULL,
-  `choice_text` varchar(200) NOT NULL,
-  `votes` int(11) NOT NULL,
-  `question_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- テーブルのデータのダンプ `testapp_choice`
@@ -52,11 +43,11 @@ INSERT INTO `testapp_choice` (`id`, `choice_text`, `votes`, `question_id`) VALUE
 (11, 'ぶどう', 2, 5),
 (12, 'みかん', 4, 5),
 (13, 'かき', 2, 5),
-(14, 'tetete', 0, 6),
-(15, 'tetutu', 0, 6),
-(16, 'tettiti', 0, 6),
-(17, 'tetoto', 0, 6),
-(18, 'add choice from shell', 0, 7);
+(14, '114', 0, 6),
+(15, '514', 0, 6),
+(16, '1919', 0, 6),
+(17, '810', 0, 6),
+(18, 'ｲｸｲｸ', 0, 7);
 
 --
 -- Indexes for dumped tables
