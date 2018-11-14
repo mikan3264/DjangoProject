@@ -27,3 +27,12 @@
 　
 　これがうまくいけばAdmin関連の何かの設定がおかしい。うまくいかなければDB関連の何かがおかしい。
 
+2018/11/14 
+:顔認証システム構築への道
+　https://note.nkmk.me/python-opencv-face-detection-haar-cascade/
+　https://qiita.com/fukuit/items/c6be23a301a97ebf60e8
+　　>PythonでopenCVを利用し画像内の顔を識別する方法
+
+　https://blog.aidemy.net/entry/2017/12/17/214715
+　　>openCVと機械学習で乃木坂46の顔識別システム構築の話
+
