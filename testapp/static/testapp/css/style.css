@@ -26,17 +26,17 @@ li {
 }
 
     li a {
-        /* height: calc(100% / 5); */ /* ŒvZ‚Å•‚‚³‚ğŒˆ’è‚³‚¹‚é‚Ì–Y‚ê‚½ */
+        /* height: calc(100% / 5); */ /* è¨ˆç®—ã§å¹…é«˜ã•ã‚’æ±ºå®šã•ã›ã‚‹ã®å¿˜ã‚ŒãŸ */
         text-decoration: none;
         color: red;
     }
 
-/* ’Êí‚Ì”wŒiF */
+/* é€šå¸¸æ™‚ã®èƒŒæ™¯è‰² */
 .colchan {
     background-color: #b1eeff;
     transition: all 0.5s ease;
 }
-    /* ƒ}ƒEƒXƒI[ƒo[‚Ì”wŒiF */
+    /* ãƒã‚¦ã‚¹ã‚ªãƒ¼ãƒãƒ¼æ™‚ã®èƒŒæ™¯è‰² */
     .colchan:hover {
         background-color: #ffc9d7;
         opacity: 0;
