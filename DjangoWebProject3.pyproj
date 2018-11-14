@@ -69,6 +69,8 @@
     <Folder Include="testapp\static\" />
     <Folder Include="testapp\static\testapp\" />
     <Folder Include="testapp\static\testapp\images\" />
+    <Folder Include="testapp\static\testapp\css\" />
+    <Folder Include="testapp\static\testapp\js\" />
     <Folder Include="testapp\templates\" />
     <Folder Include="testapp\templates\testapp\" />
   </ItemGroup>
@@ -103,9 +105,10 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
-    <Content Include="testapp\static\testapp\style.css">
+    <Content Include="testapp\static\testapp\css\style.css">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="testapp\static\testapp\js\sample.js" />
     <Content Include="testapp\templates\testapp\detail.html">
       <SubType>Code</SubType>
     </Content>

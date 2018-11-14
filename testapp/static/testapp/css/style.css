@@ -1,3 +1,4 @@
+
 .wf-mplus1p {
     font-family: "M PLUS 1p";
 }
@@ -5,13 +6,14 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: white url("images/background.gif") no-repeat;
+    background: white url("../images/background.gif") no-repeat;
 }
 
 .bgsize {
     width: 347px;
     height: 309px;
 }
+
 ul {
     margin: 0px;
     padding: 0px;
@@ -23,18 +25,18 @@ li {
     padding: 20px 0;
 }
 
-li a {
-    /* height: calc(100% / 5); */ /* 計算で幅高さを決定させるの忘れた */
-    text-decoration: none;
-    color: red;
-}
+    li a {
+        /* height: calc(100% / 5); */ /* 計算で幅高さを決定させるの忘れた */
+        text-decoration: none;
+        color: red;
+    }
 
 /* 通常時の背景色 */
 .colchan {
     background-color: #b1eeff;
     transition: all 0.5s ease;
 }
-/* マウスオーバー時の背景色 */
+    /* マウスオーバー時の背景色 */
     .colchan:hover {
         background-color: #ffc9d7;
         opacity: 0;
